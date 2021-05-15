@@ -1,13 +1,14 @@
-const sendChatMessage = require('../../utilities/sendChatMessage')
+const CommandClass = require('./../../superclasses/CommandClass')
 
-class ez {
+class ez extends CommandClass{
     /**
      * 
      * @param {object} messageData 
      * @param {minecraft bot} bot 
      */
     constructor(messageData, bot) {
-        sendChatMessage('EZZZZZZZZZZZZZZZZZZZZZZZZZ',bot,messageData)
+        super()
+        this.sendChatMessage('EZZZZZZZZZZZZZZZZZZZZZZZZZ',bot,messageData)
     }
 }
 

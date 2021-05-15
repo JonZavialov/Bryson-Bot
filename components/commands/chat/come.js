@@ -1,10 +1,11 @@
-const sendPm = require('../../utilities/sendPm')
-const mineflayer = require('mineflayer')
 const denyCommand = require('../../utilities/denyCommand')
 const { pathfinder, Movements, goals: { GoalNear } } = require('mineflayer-pathfinder')
+const CommandClass = require('./../../superclasses/CommandClass')
 
-class come {
+
+class come extends CommandClass{
     constructor(messageData, bot){
+        super()
         const isNicked = denyCommand(messageData,bot)
         if(isNicked) return
         const RANGE_GOAL = 1 // get within this radius of the player
@@ -16,7 +17,7 @@ class come {
 
         const target = bot.players[messageData.author]?.entity
         if(!target){
-            sendPm(messageData.author,"I don't see you in my render distance!",bot)
+            this.sendPm(messageData.author,"I don't see you in my render distance!", bot)
             return
         }
 

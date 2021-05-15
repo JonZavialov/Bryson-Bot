@@ -1,13 +1,15 @@
-const issueCommand = require('../../utilities/issueCommand')
+const CommandClass = require('./../../superclasses/CommandClass')
 
-class kill {
+
+class kill extends CommandClass{
     /**
      * 
      * @param {object} messageData 
      * @param {minecraft bot} bot 
      */
     constructor(messageData, bot) {
-        issueCommand('suicide',bot)
+        super()
+        this.issueCommand('suicide',bot)
     }
 }
 
