@@ -18,7 +18,7 @@ const bot = mineflayer.createBot({
 });
 
 const welcome = () => {
-  //sendChatMessage("Hello Nether Anarchy, I'm bryson bot! Use \"!help\" to see my commands.",bot)
+  sendChatMessage("Hello Nether Anarchy, I'm bryson bot! Use \"!help\" to see my commands.",bot)
 };
 bot.once('spawn', (welcome));
 
