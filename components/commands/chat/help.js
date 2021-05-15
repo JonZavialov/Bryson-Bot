@@ -7,7 +7,7 @@ class help {
      * @param {minecraft bot} bot 
      */
     constructor(messageData, bot) {
-        sendChatMessage('Bryson bot is currently under construction. Come back later to see what i can do!',bot)
+        sendChatMessage('Bryson bot is currently under construction. For now my commands include: !come, !coords, !discord, !help, !kill, !ping',bot)
     }
 }
 
