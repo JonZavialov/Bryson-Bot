@@ -35,7 +35,7 @@ function handleCommand(messageData, bot) {
     
     let data = JSON.stringify(usesDict);
     fs.writeFileSync(logPath, data);
-    console.log(usesDict)
+
     let evalString = "new " + messageData.content + `(messageData, bot)`
     eval(evalString)
 }
