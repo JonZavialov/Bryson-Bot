@@ -7,7 +7,7 @@ class ez {
      * @param {minecraft bot} bot 
      */
     constructor(messageData, bot) {
-        sendChatMessage('EZZZZZZZZZZZZZZZZZZZZZZZZZ',bot)
+        sendChatMessage('EZZZZZZZZZZZZZZZZZZZZZZZZZ',bot,messageData)
     }
 }
 

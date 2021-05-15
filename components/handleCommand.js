@@ -21,7 +21,7 @@ function handleCommand(messageData, bot) {
         if(messageData.content==commands[i].name) isCommand = true
     }
     if(!isCommand){
-        sendChatMessage("Not a command!",bot)
+        sendChatMessage("Not a command!",bot,messageData)
         return
     }
     let evalString = "new " + messageData.content + `(messageData, bot)`

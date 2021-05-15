@@ -11,7 +11,7 @@ class coords {
 
         pos = Math.round(pos['x']) + " " + Math.round(pos['z'])
         
-        sendChatMessage(`I am at ${pos}`,bot)
+        sendChatMessage(`I am at ${pos}`,bot,messageData)
     }
 }
 

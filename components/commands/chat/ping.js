@@ -13,7 +13,7 @@ class ping {
         
         const playerDict = bot.players
         const ping = playerDict[messageData.author]['ping']
-        sendChatMessage(`Your ping is ${ping}.`, bot)
+        sendChatMessage(`Your ping is ${ping}.`, bot,messageData)
     }
 }
 

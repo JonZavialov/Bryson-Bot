@@ -7,7 +7,7 @@ class discord {
      * @param {minecraft bot} bot 
      */
     constructor(messageData, bot) {
-        sendChatMessage('join our discord!- zWKwub73z3',bot)
+        sendChatMessage('join our discord!- zWKwub73z3',bot,messageData)
     }
 }
 
