@@ -1,4 +1,5 @@
 const handleCommand = require("./handleCommand")
+const handlePm = require("./handlePm")
 
 /**
  * 
@@ -13,13 +14,16 @@ function handleChat(message, bot) {
 
     if (messageType == 'chat'){ 
         let messageDict = parseChat(message)
-        if(messageDict.content.indexOf('!')!=-1){
+        if(messageDict.content[0]=="!"){
             messageDict.content = messageDict.content.replace('!','')
             handleCommand(messageDict, bot)
         }
     }
 
-    if(messageType == 'pm') parsePm(message)
+    if(messageType == 'pm'){
+        let messageDict = parseChat(message)
+        handlePm(messageDict, bot)
+    } 
 }
 
 /**

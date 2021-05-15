@@ -1,4 +1,4 @@
-const help = require('./commands/help')
+const help = require('./commands/chat/help')
 
 const commands = [help]
 

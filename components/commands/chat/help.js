@@ -1,4 +1,4 @@
-const sendChatMessage = require('./../utilities/sendChatMessage')
+const sendChatMessage = require('../../utilities/sendChatMessage')
 
 class help {
     /**
