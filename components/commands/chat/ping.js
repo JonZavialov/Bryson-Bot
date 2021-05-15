@@ -1,19 +1,20 @@
-const sendChatMessage = require('../../utilities/sendChatMessage')
-const denyCommand = require('../../utilities/denyCommand')
+const CommandClass = require('./../../superclasses/CommandClass')
 
-class ping {
+
+class ping extends CommandClass{
     /**
      * 
      * @param {object} messageData 
      * @param {minecraft bot} bot 
      */
     constructor(messageData, bot) {
-        const isNicked = denyCommand(messageData,bot)
+        super()
+        const isNicked = this.denyCommand(messageData,bot)
         if(isNicked) return
         
         const playerDict = bot.players
         const ping = playerDict[messageData.author]['ping']
-        sendChatMessage(`Your ping is ${ping}.`, bot,messageData)
+        this.sendChatMessage(`${messageData.author}, your ping is ${ping}.`, bot, messageData)
     }
 }
 

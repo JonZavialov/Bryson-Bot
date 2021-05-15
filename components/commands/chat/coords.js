@@ -1,17 +1,18 @@
-const sendChatMessage = require('../../utilities/sendChatMessage')
+const CommandClass = require('./../../superclasses/CommandClass')
 
-class coords {
+class coords extends CommandClass {
     /**
      * 
      * @param {object} messageData 
      * @param {minecraft bot} bot 
      */
     constructor(messageData, bot) {
+        super()
         var pos = bot.player.entity['position']
 
         pos = Math.round(pos['x']) + " " + Math.round(pos['z'])
         
-        sendChatMessage(`I am at ${pos}`,bot,messageData)
+        this.sendChatMessage(`I am at ${pos}`,bot,messageData)
     }
 }
 
