@@ -9,7 +9,8 @@ const logMostRecentChatMessage = require('./components/utilities/logMostRecentCh
 // / imports
 
 // Bot declaration
-const bot = mineflayer.createBot({
+let bot;
+bot = mineflayer.createBot({
     host: login.server,
     port: login.port,
     username: login.username,
@@ -17,6 +18,19 @@ const bot = mineflayer.createBot({
     version: false,
     auth: 'microsoft'
 });
+
+bot.on('kicked', (reason, loggedin) => {
+  setTimeout(() => {
+    bot = mineflayer.createBot({
+    host: login.server,
+    port: login.port,
+    username: login.username,
+    password: login.password,
+    version: false,
+    auth: 'microsoft'
+    });
+  }, 5000) 
+})
 // / Bot declaration
 
 // welcome message

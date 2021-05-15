@@ -35,7 +35,7 @@ function deterermineMessageType(content){
     if(content.indexOf('<')!=-1 && content.indexOf('>')!= -1){
         return "chat"
     }
-    else if(content.indexOf('[')!=-1&&content.indexOf(']')!=-1&&content.indexOf('->')!=-1){
+    else if(content.indexOf('[')!=-1&&content.indexOf(']')!=-1&&content.indexOf('-> me')!=-1){
         return 'pm'
     }
     else{
