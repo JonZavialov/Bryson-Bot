@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/JonZavialov/BrysonBot#readme",
   "dependencies": {
-    "mineflayer": "^3.6.0"
+    "mineflayer": "^3.6.0",
+    "mineflayer-pathfinder": "^1.6.1"
   }
 }
