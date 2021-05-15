@@ -1,3 +1,5 @@
+const fs = require('fs')
+
 const help = require('./commands/chat/help')
 const kill = require('./commands/chat/kill')
 const come = require('./commands/chat/come')
@@ -24,6 +26,16 @@ function handleCommand(messageData, bot) {
         sendChatMessage("Not a command!",bot,messageData)
         return
     }
+    
+    const logPath = require('path').resolve(__dirname, './resources/stats.json')
+
+    let rawdata = fs.readFileSync(logPath);
+    let usesDict = JSON.parse(rawdata);
+    usesDict.uses += 1
+    
+    let data = JSON.stringify(usesDict);
+    fs.writeFileSync(logPath, data);
+    console.log(usesDict)
     let evalString = "new " + messageData.content + `(messageData, bot)`
     eval(evalString)
 }

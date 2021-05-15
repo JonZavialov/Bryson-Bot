@@ -26,7 +26,7 @@ bot.on('message', async message =>  {
   handleChat(message.toString(), bot)
   console.log(message.toString())
   if(message.toString().indexOf("was slain by SonyTV")!=-1){
-    sendChatMessage("Ez kill!",bot)
+    sendChatMessage("ez kill!",bot)
   }
 
   if(message.toString().indexOf('before sending another message!')!= -1){
