@@ -1,6 +1,7 @@
 const help = require('./commands/chat/help')
+const kill = require('./commands/chat/kill')
 
-const commands = [help]
+const commands = [help,kill]
 
 /**
  * 
@@ -9,7 +10,6 @@ const commands = [help]
  */
 function handleCommand(messageData, bot) {
     let evalString = "new " + messageData.content + `(messageData, bot)`
-    console.log(evalString)
     eval(evalString)
 }
 
