@@ -5,8 +5,8 @@ const login = require('./login.json')
 // / imports
 
 const bot = mineflayer.createBot({
-    host: 'netheranarchy.org',
-    port: 25565,
+    host: login.server,
+    port: login.port,
     username: login.username,
     password: login.password,
     version: false,
