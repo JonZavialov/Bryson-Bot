@@ -21,3 +21,5 @@ bot.on('message', async message =>  {
 setInterval(() => {
   sendChatMessage("Hello Nether Anarchy, I'm bryson bot! Use \"!help\" to see my commands.",bot)
 },600000);
+
+//alex was here
