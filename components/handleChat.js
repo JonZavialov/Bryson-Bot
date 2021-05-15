@@ -21,7 +21,7 @@ function handleChat(message, bot) {
     }
 
     if(messageType == 'pm'){
-        let messageDict = parseChat(message)
+        let messageDict = parsePm(message)
         handlePm(messageDict, bot)
     } 
 }
@@ -47,7 +47,6 @@ function deterermineMessageType(content){
  * @param {string} message 
  */
 function parseChat(message) {
-    
     if(message.indexOf('[')!=-1&&message.indexOf(']')!=-1){
     const suffix = message.substring(message.indexOf('['),message.indexOf(']')+1)
     message= message.replace(suffix,'')
@@ -72,16 +71,14 @@ function parseChat(message) {
  * @param {string} message 
  */
 
-function parsePm(message){
+function parsePm(message){ 
     let data = {
 
     }
     data.author = message.substring(message.indexOf('[')+1,message.indexOf(' '))
     data.content = message.substring(message.indexOf(']') + 2)
     data.type = 'pm'
-
     console.log(data)
-
     return data
 }
 

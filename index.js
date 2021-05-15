@@ -4,7 +4,7 @@ const handleChat = require('./components/handleChat')
 // / imports
 
 const bot = mineflayer.createBot({
-    host: 'downcraft.org',
+    host: 'netheranarchy.org',
     port: 25565,
     username: 'brysonbot@hotmail.com',
     password: 'iuasdfuyisadgfyugsdiyufghdsiuygfuoiygfduyogfousdgufdgyuifgkusdgyufgsukydfgukydgfuysdgfuyg6534652364243',
