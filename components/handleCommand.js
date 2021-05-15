@@ -3,9 +3,10 @@ const kill = require('./commands/chat/kill')
 const come = require('./commands/chat/come')
 const coords = require('./commands/chat/coords')
 const discord = require('./commands/chat/discord')
+const ping = require('./commands/chat/ping')
 const sendChatMessage = require('./utilities/sendChatMessage')
 
-const commands = [help,kill,come,discord,coords]
+const commands = [help,kill,come,discord,coords,ping]
 
 /**
  * 
