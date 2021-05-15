@@ -2,8 +2,9 @@ const help = require('./commands/chat/help')
 const kill = require('./commands/chat/kill')
 const come = require('./commands/chat/come')
 const coords = require('./commands/chat/coords')
+const discord = require('./commands/chat/discord')
 
-const commands = [help,kill,come,coords]
+const commands = [help,kill,come,discord]
 
 /**
  * 
