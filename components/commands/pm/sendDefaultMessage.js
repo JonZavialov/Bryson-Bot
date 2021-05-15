@@ -7,7 +7,7 @@ class sendDefaultMessage {
      * @param {minecraft bot} bot 
      */
     constructor(messageData, bot) {
-        sendPm('SHUT UP LEAVE ME ALONE',bot)
+        sendPm(messageData.author,'SHUT UP LEAVE ME ALONE',bot)
     }
 }
 
