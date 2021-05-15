@@ -3,6 +3,7 @@ const kill = require('./commands/chat/kill')
 const come = require('./commands/chat/come')
 const coords = require('./commands/chat/coords')
 const discord = require('./commands/chat/discord')
+const sendChatMessage = require('./utilities/sendChatMessage')
 
 const commands = [help,kill,come,discord,coords]
 
@@ -16,7 +17,10 @@ function handleCommand(messageData, bot) {
     for(var i = 0;i<commands.length;i++){
         if(messageData.content==commands[i].name) isCommand = true
     }
-    if(!isCommand) return
+    if(!isCommand){
+        sendChatMessage("Not a command!",bot)
+        return
+    }
     let evalString = "new " + messageData.content + `(messageData, bot)`
     eval(evalString)
 }
