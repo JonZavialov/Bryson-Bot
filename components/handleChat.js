@@ -59,10 +59,12 @@ function parseChat(message) {
     
     data.author = message.substring(message.indexOf('<') + 1, message.indexOf('>'))
     data.content = message.substring(message.indexOf('>') + 2)
+    
+    while(data.content[0] == ' '){
+        data.content = data.content.replace(' ','')
+    }
+
     data.type = 'chat'
-
-    console.log(data)
-
     return data
 }
 
@@ -78,7 +80,6 @@ function parsePm(message){
     data.author = message.substring(message.indexOf('[')+1,message.indexOf(' '))
     data.content = message.substring(message.indexOf(']') + 2)
     data.type = 'pm'
-    console.log(data)
     return data
 }
 

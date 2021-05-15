@@ -7,7 +7,7 @@ class kill {
      * @param {minecraft bot} bot 
      */
     constructor(messageData, bot) {
-        issueCommand('kill',bot)
+        issueCommand('suicide',bot)
     }
 }
 

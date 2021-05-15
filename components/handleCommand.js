@@ -4,9 +4,11 @@ const come = require('./commands/chat/come')
 const coords = require('./commands/chat/coords')
 const discord = require('./commands/chat/discord')
 const ping = require('./commands/chat/ping')
+const ez = require('./commands/chat/ez')
+const spawn = require('./commands/chat/spawn')
 const sendChatMessage = require('./utilities/sendChatMessage')
 
-const commands = [help,kill,come,discord,coords,ping]
+const commands = [help,kill,come,discord,coords,ping,ez,spawn]
 
 /**
  * 

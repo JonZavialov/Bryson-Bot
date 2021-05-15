@@ -1,9 +1,12 @@
 const sendPm = require('../../utilities/sendPm')
 const mineflayer = require('mineflayer')
+const denyCommand = require('../../utilities/denyCommand')
 const { pathfinder, Movements, goals: { GoalNear } } = require('mineflayer-pathfinder')
 
 class come {
     constructor(messageData, bot){
+        const isNicked = denyCommand(messageData,bot)
+        if(isNicked) return
         const RANGE_GOAL = 1 // get within this radius of the player
 
         bot.loadPlugin(pathfinder)

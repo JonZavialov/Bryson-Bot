@@ -16,8 +16,9 @@ const bot = mineflayer.createBot({
 
 bot.on('message', async message =>  {
     handleChat(message.toString(), bot)
+    console.log(message.toString())
 })
 
 setInterval(() => {
   sendChatMessage("Hello Nether Anarchy, I'm bryson bot! Use \"!help\" to see my commands.",bot)
-},600000);
+},300000);
