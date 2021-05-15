@@ -1,5 +1,6 @@
 const handleCommand = require("./handleCommand")
 const handlePm = require("./handlePm")
+const logMostRecentChat = require("./resources/mostRecentChatMessage.json")
 
 /**
  * 

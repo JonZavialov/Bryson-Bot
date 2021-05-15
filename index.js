@@ -14,9 +14,17 @@ const bot = mineflayer.createBot({
     auth: 'microsoft'
 });
 
+const welcome = () => {
+  //sendChatMessage("Hello Nether Anarchy, I'm bryson bot! Use \"!help\" to see my commands.",bot)
+};
+bot.once('spawn', (welcome));
+
 bot.on('message', async message =>  {
-    handleChat(message.toString(), bot)
-    console.log(message.toString())
+  handleChat(message.toString(), bot)
+  console.log(message.toString())
+  if(message.toString().indexOf("was slain by SonyTV")!=-1){
+    sendChatMessage("Ez kill!",bot)
+  }
 })
 
 setInterval(() => {
