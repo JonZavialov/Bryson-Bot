@@ -1,13 +1,6 @@
 const help = require('./commands/help')
 
-
-
-
 const commands = [help]
-
-
-
-
 
 /**
  * 

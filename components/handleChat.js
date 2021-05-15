@@ -19,7 +19,6 @@ function handleChat(message, bot) {
         }
     }
 
-
     if(messageType == 'pm') parsePm(message)
 }
 
@@ -37,7 +36,6 @@ function deterermineMessageType(content){
     else{
         return null
     }
- 
 }
 
 /**

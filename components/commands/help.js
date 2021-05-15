@@ -9,10 +9,6 @@ class help {
     constructor(messageData, bot) {
         sendChatMessage('Bryson bot is currently under construction. Come back later to see what i can do!',bot)
     }
-
-
-
-
 }
 
 module.exports = help
