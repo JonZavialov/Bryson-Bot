@@ -83,7 +83,7 @@ async function runDiscordBot() {
     })
 
     discordBot.on("message", msg => {
-      if (msg.channel.id == "843202556842737674" && msg.author.id!= "843198298550173706" && msg.content.toLowerCase().indexOf('george') == -1 && msg.content.toLowerCase().indexOf('discord')) {
+      if (msg.channel.id == "843202556842737674" && msg.author.id!= "843198298550173706" && msg.content.toLowerCase().indexOf('george') == -1 && msg.content.toLowerCase().indexOf('discord') == -1 && msg.content.length < 100) {
         console.log(msg.author.username + ": " + msg.content)
         sendChatMessage(msg.author.username + ": " + msg.content,bot)
       }

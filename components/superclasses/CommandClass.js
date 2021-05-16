@@ -19,7 +19,7 @@ class CommandClass {
     }
 
     sendChatMessage(message, bot, messageDict = {author: "undefined"}) {
-        bot.chat(`&6${message}`)
+        bot.chat(`&7${message}`)
         this.logMostRecentChatMessage(messageDict,message)
     }
 
