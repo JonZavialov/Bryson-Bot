@@ -8,9 +8,10 @@ const discord = require('./commands/chat/discord')
 const ping = require('./commands/chat/ping')
 const ez = require('./commands/chat/ez')
 const spawn = require('./commands/chat/spawn')
+const fuck = require('./commands/chat/fuck')
 const sendChatMessage = require('./utilities/sendChatMessage')
 
-const commands = [help,kill,come,discord,coords,ping,ez,spawn]
+const commands = [help,kill,come,discord,coords,ping,ez,spawn,fuck]
 
 /**
  * 
@@ -18,9 +19,26 @@ const commands = [help,kill,come,discord,coords,ping,ez,spawn]
  * @param {minecraft bot} bot 
  */
 function handleCommand(messageData, bot) {
+    var containsArgs = false
+    var args
+    if(messageData.content.indexOf(' ')==-1){
+        command = messageData.content
+    }
+    else{
+        containsArgs = true
+        command = messageData.content.substring(0,messageData.content.indexOf(' '))
+        args = messageData.content.substring(messageData.content.indexOf(' ') + 1)
+    }
+
+    if(command == "fuck"){
+        new fuck(messageData,bot,args)
+        return
+    }
+
+    console.log(command,containsArgs)
     let isCommand = false
     for(var i = 0;i<commands.length;i++){
-        if(messageData.content==commands[i].name) isCommand = true
+        if(command==commands[i].name) isCommand = true
     }
     if(!isCommand){
         sendChatMessage("Not a command!",bot,messageData)
@@ -36,7 +54,7 @@ function handleCommand(messageData, bot) {
     let data = JSON.stringify(usesDict);
     fs.writeFileSync(logPath, data);
 
-    let evalString = "new " + messageData.content + `(messageData, bot)`
+    let evalString = "new " + command + `(messageData, bot)`
     eval(evalString)
 }
 
