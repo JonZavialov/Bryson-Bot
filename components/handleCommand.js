@@ -9,9 +9,10 @@ const ping = require('./commands/chat/ping')
 const ez = require('./commands/chat/ez')
 const spawn = require('./commands/chat/spawn')
 const fuck = require('./commands/chat/fuck')
+const mount = require('./commands/chat/mount')
 const sendChatMessage = require('./utilities/sendChatMessage')
 
-const commands = [help,kill,come,discord,coords,ping,ez,spawn,fuck]
+const commands = [help,kill,come,discord,coords,ping,ez,spawn,fuck,mount]
 
 /**
  * 
@@ -53,7 +54,7 @@ function handleCommand(messageData, bot) {
     
     let data = JSON.stringify(usesDict);
     fs.writeFileSync(logPath, data);
-
+    
     let evalString = "new " + command + `(messageData, bot)`
     eval(evalString)
 }

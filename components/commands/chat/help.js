@@ -9,7 +9,7 @@ class help extends CommandClass{
      */
     constructor(messageData, bot) {
         super()
-        this.sendChatMessage('Bryson bot is currently under construction. For now my commands include: !ez, !spawn, !come, !coords, !discord, !help, !kill, !ping',bot,messageData)
+        this.sendChatMessage('Bryson bot is currently under construction. For now my commands include: !ez, !spawn, !come, !coords, !discord, !help, !kill, !ping, !mount, !fuck',bot,messageData)
     }
 }
 
